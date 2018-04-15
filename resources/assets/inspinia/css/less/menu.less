@@ -1,0 +1,113 @@
+#menu{
+
+  .mennu-box{
+    background: #ffffff;
+
+    .phone{
+      position: relative;
+      margin-bottom: 20px;
+      float: left;
+      margin: 0 0;
+      width: 400px;
+      height: 700px;
+      background: url("../../img/preview_phone_short.jpg") no-repeat center;
+
+      .frame{
+        position: absolute;
+        left: 0;
+        margin: 100px 0 0 40px;
+        width: 320px;
+        border: 2px solid #333;
+        background: #666;
+        height: 491px;
+        width: 325px;
+        overflow: hidden;
+
+        .wx-menu{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 50px;
+          background: #fff;
+
+          .keyboard{
+            float: left;
+            width: 44px;
+            height: 50px;
+            background: url("../../img/wx_menu_keyboard_icon.png") no-repeat;
+            background-size: 100% 100%;
+            border-right: 1px solid #CCC;
+          }
+          .menu{
+            display: -webkit-box;
+            height: 50px;
+            float: left;
+            width: 277px;
+
+            >div{
+              -webkit-box-flex: 1;
+              display: block;
+              line-height: 50px;
+              color: #434343;
+              text-align: center;
+              border-right: 1px solid #ccc;
+              position: relative;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .menu-list{
+      margin-top: 15px;
+      float: left;
+      width: e("calc(100% - 415px)");
+      .table{
+
+        .action-tools{
+          width: 150px;
+          text-align: center;
+
+           span{
+              margin-right: 10px;
+           }
+        }
+        .add{
+          color: #4097ce;
+          background: #ffffff;
+          cursor: pointer;
+        }
+        .operation{
+          background: #ffffff;
+        }
+        .compile{
+          color: #4097ce;
+          cursor: pointer;
+        }
+        .delete{
+          color: #4097ce;
+          cursor: pointer;
+        }
+        .second-menu{
+
+
+          td:first-child{
+            padding-left: 25px;
+          }
+        }
+      }
+    }
+    .issue{
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid #dddddd;
+
+      button{
+        padding: 5px 25px;
+        background: #1cc09f;
+        border: none;
+      }
+    }
+  }
+}

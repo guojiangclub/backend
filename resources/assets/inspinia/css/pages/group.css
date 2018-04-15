@@ -1,0 +1,211 @@
+#group .group-box {
+  background: #ffffff;
+}
+#group .group-box .tab-content .hint {
+  color: #da4224;
+  background: #f4ffc1;
+  padding: 10px;
+  margin: 10px 0;
+  line-height: 20px;
+}
+#group .group-box .tab-content .hint i {
+  font-size: 20px;
+}
+#group .group-box .tab-content .tab-contents {
+  background: #eaeaea;
+  padding: 20px 10px;
+  margin-top: 20px;
+}
+#group .group-box .tab-content .tab-contents .controls .check-item {
+  color: #676a6c;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#group .group-box .tab-content .tab-contents .message-list {
+  margin-top: 20px;
+}
+#group .group-box .tab-content .tab-contents .message-list .title {
+  line-height: 30px;
+  color: #333333;
+  font-size: 15px;
+}
+#group .group-box .tab-content .tab-contents .message-list .dropdown {
+  margin: 20px 0;
+}
+#group .group-box .tab-content .tab-contents .message-list .dropdown button {
+  width: 120px;
+}
+#group .group-box .tab-content .tab-contents .message-list .select-assign {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #888;
+  padding: 5px 12px;
+  vertical-align: middle;
+  width: 123px;
+  text-align: center;
+  margin: 20px 0;
+  cursor: pointer;
+}
+#group .group-box .tab-content .tab-contents .message-list .preview {
+  margin: 20px 0;
+}
+#group .group-box .tab-content .tab-contents .message-list .button-box button {
+  padding: 8px 30px;
+  margin-right: 10px;
+}
+#group .group-box .tab-content .middle-tab-content {
+  padding-top: 20px;
+  position: relative;
+}
+#group .group-box .tab-content .middle-tab-content .select {
+  height: auto;
+  padding: 10px;
+  background: #ffffff;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+}
+#group .group-box .tab-content .middle-tab-content .select p {
+  border: 1px dashed #ddd;
+  width: 308px;
+  background: #eee;
+  text-align: center;
+  color: #333;
+  margin: 0;
+  height: 240px;
+  line-height: 240px;
+}
+#group .group-box .tab-content .middle-tab-content .select textarea {
+  resize: none;
+  width: 100%;
+  height: 235px;
+  border: 1px solid #dddddd;
+  padding: 6px;
+  font-size: 15px;
+}
+#group .group-box .tab-content .middle-tab-content .select .add-text {
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
+  cursor: pointer;
+  color: #888888;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  padding: 5px 20px;
+  background-color: #eeeeee;
+  display: block;
+}
+#group .group-box .tab-content .middle-tab-content .select .delete {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 285px;
+  font-size: 20px;
+}
+#group .group-box .tab-content .middle-tab-content .btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 50px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background: #44b549;
+  border: none;
+}
+.modal .modal-header {
+  background: #eeeeee;
+  color: #333333;
+  font-size: 16px;
+}
+.modal .modal-body {
+  padding: 0;
+}
+.modal .modal-body .no-material {
+  padding: 100px;
+  text-align: center;
+  display: none;
+}
+.modal .modal-body .have-material {
+  padding: 10px;
+}
+.modal .modal-body .have-material .seek {
+  float: right;
+  width: 200px;
+  margin-right: 15px;
+}
+.modal .modal-body .have-material .material-table {
+  margin-top: 60px;
+}
+.modal .modal-body .have-material .material-table .table th {
+  background: none;
+  border-bottom: none;
+}
+.modal .modal-body .have-material .material-table .table th:first-child {
+  width: 35px;
+}
+.modal .modal-body .have-material .material-table .table th:nth-child(2) {
+  width: 45px;
+  text-align: center;
+}
+.modal .modal-body .have-material .material-table .table .no {
+  text-align: center;
+}
+.modal .modal-body .have-material.img-list div {
+  padding: 10px;
+}
+.modal .modal-body .have-material.img-list div img {
+  display: block;
+  width: 100%;
+  height: 240px;
+}
+.modal .modal-body .have-material.img-list .img-box {
+  border: 1px solid #dddddd;
+  position: relative;
+}
+.modal .modal-body .have-material.img-list .img-box:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  text-align: center;
+  padding-top: 100px;
+  display: none;
+}
+.modal .modal-body .have-material.img-list .img-box:hover:after {
+  display: block;
+  cursor: pointer;
+}
+.modal .modal-body .uploading-tab {
+  margin-top: 10px;
+}
+.modal .modal-body .uploading-content {
+  padding: 10px 25px;
+}
+.modal .modal-body .uploading-content .uploading-img .img-box {
+  float: left;
+  margin-right: 10px;
+  width: 128px;
+  height: 128px;
+}
+.modal .modal-body .uploading-content .uploading-img .uploading-buttom {
+  float: left;
+  width: 128px;
+  height: 128px;
+  text-align: center;
+  line-height: 128px;
+  background: #000;
+  cursor: pointer;
+  color: #ffffff;
+}
+.modal .modal-body .uploading-content .uploading-img .uploading-buttom i {
+  font-size: 20px;
+}

@@ -1,0 +1,160 @@
+#reply{
+
+  .reply-box{
+    background: #ffffff;
+    padding: 10px;
+    .hint{
+      color: #da4224;
+      background: #f4ffc1;
+
+      p{
+        padding: 10px;
+        line-height: 20px;
+
+        i{
+          font-size: 20px;
+        }
+      }
+    }
+    .tabs{
+      padding: 10px 0;
+
+      .title{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .controls{
+
+        .check-item{
+          color: #676a6c;
+          display: inline-block;
+          margin-right: 10px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+      #myTabContent{
+        padding-top: 20px;
+        position: relative;
+        .select{
+          border: 1px dashed #ddd;
+          width: 308px;
+          height: auto;
+          background: #eee;
+          text-align: center;
+          color: #333;
+          cursor: pointer;
+
+          :hover{
+            color: #58b4ef;
+          }
+
+          p{
+            height: 200px;
+            line-height: 200px;
+          }
+
+          .delete{
+            display: none;
+            position: absolute;
+            top: 20px;
+            left: 285px;
+            font-size: 20px;
+          }
+        }
+        .btn{
+          margin-top: 20px;
+          display: inline-block;
+          padding: 12px 50px;
+          font-size: 16px;
+          line-height: 20px;
+          color: #fff;
+          text-align: center;
+          vertical-align: middle;
+          cursor: pointer;
+          background: #44b549;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.modal {
+
+  .modal-header {
+    background: #eeeeee;
+    color: #333333;
+    font-size: 16px;
+  }
+  .modal-body {
+    padding: 0;
+
+    .no-material {
+      padding: 100px;
+      text-align: center;
+      display: none;
+    }
+    .have-material{
+      padding: 10px;
+
+      .seek{
+        float: right;
+        width: 200px;
+        margin-right: 15px;
+      }
+      .material-table{
+      margin-top: 60px;
+       .table{
+         th{
+           background: none;
+           border-bottom: none;
+           &:first-child{
+             width: 35px;
+           }
+           &:nth-child(2){
+             width: 45px;
+             text-align: center;
+           }
+         }
+         .no{
+           text-align: center;
+         }
+       }
+      }
+      &.img-list{
+
+        div{
+          padding: 10px;
+
+          img{
+            display: block;
+            width: 100%;
+            height: 240px;
+          }
+        }
+        .img-box{
+          border: 1px solid #dddddd;
+          position: relative;
+          &:after{
+            content: ' ';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,.4);
+            z-index: 100;
+            text-align: center;
+            padding-top: 100px;
+            display: none;
+          }
+          &:hover:after{
+            display: block;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

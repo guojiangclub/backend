@@ -1,0 +1,136 @@
+#reply .reply-box {
+  background: #ffffff;
+  padding: 10px;
+}
+#reply .reply-box .hint {
+  color: #da4224;
+  background: #f4ffc1;
+}
+#reply .reply-box .hint p {
+  padding: 10px;
+  line-height: 20px;
+}
+#reply .reply-box .hint p i {
+  font-size: 20px;
+}
+#reply .reply-box .tabs {
+  padding: 10px 0;
+}
+#reply .reply-box .tabs .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+#reply .reply-box .tabs .controls .check-item {
+  color: #676a6c;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#reply .reply-box .tabs #myTabContent {
+  padding-top: 20px;
+  position: relative;
+}
+#reply .reply-box .tabs #myTabContent .select {
+  border: 1px dashed #ddd;
+  width: 308px;
+  height: auto;
+  background: #eee;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+}
+#reply .reply-box .tabs #myTabContent .select :hover {
+  color: #58b4ef;
+}
+#reply .reply-box .tabs #myTabContent .select p {
+  height: 200px;
+  line-height: 200px;
+}
+#reply .reply-box .tabs #myTabContent .select .delete {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 285px;
+  font-size: 20px;
+}
+#reply .reply-box .tabs #myTabContent .btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 50px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background: #44b549;
+  border: none;
+}
+.modal .modal-header {
+  background: #eeeeee;
+  color: #333333;
+  font-size: 16px;
+}
+.modal .modal-body {
+  padding: 0;
+}
+.modal .modal-body .no-material {
+  padding: 100px;
+  text-align: center;
+  display: none;
+}
+.modal .modal-body .have-material {
+  padding: 10px;
+}
+.modal .modal-body .have-material .seek {
+  float: right;
+  width: 200px;
+  margin-right: 15px;
+}
+.modal .modal-body .have-material .material-table {
+  margin-top: 60px;
+}
+.modal .modal-body .have-material .material-table .table th {
+  background: none;
+  border-bottom: none;
+}
+.modal .modal-body .have-material .material-table .table th:first-child {
+  width: 35px;
+}
+.modal .modal-body .have-material .material-table .table th:nth-child(2) {
+  width: 45px;
+  text-align: center;
+}
+.modal .modal-body .have-material .material-table .table .no {
+  text-align: center;
+}
+.modal .modal-body .have-material.img-list div {
+  padding: 10px;
+}
+.modal .modal-body .have-material.img-list div img {
+  display: block;
+  width: 100%;
+  height: 240px;
+}
+.modal .modal-body .have-material.img-list .img-box {
+  border: 1px solid #dddddd;
+  position: relative;
+}
+.modal .modal-body .have-material.img-list .img-box:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  text-align: center;
+  padding-top: 100px;
+  display: none;
+}
+.modal .modal-body .have-material.img-list .img-box:hover:after {
+  display: block;
+  cursor: pointer;
+}

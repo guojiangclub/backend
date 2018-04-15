@@ -1,0 +1,208 @@
+#fans{
+
+  .fans-box{
+    background: #fff;
+
+    .fans-form{
+      padding: 20px 10px;
+    }
+    .fans-title{
+      padding: 5px 10px 10px;
+      border-bottom: 1px solid #dddddd;
+    }
+    .fans-left{
+
+      .fans-left-top{
+        margin-left: -15px;
+        border: 1px solid #dddddd;
+        line-height: 35px;
+        background: #f4f5f9;
+        padding: 10px 15px 10px 0;
+
+        .fans-all{
+          font-size: 20px;
+
+          label{
+            font-size: 15px;
+          }
+        }
+        .import-box{
+          width: 365px;
+          float: right;
+
+          .select-time{
+            width: 140px;
+            float: left;
+            margin-top: 1px;
+          }
+          form{
+            float: right;
+            width: 200px;
+          }
+        }
+      }
+      .no-user{
+        text-align: center;
+        font-size: 24px;
+        margin-left: -15px;
+        padding: 100px 60px 120px;
+        border: 1px solid #dddddd;
+        border-top: none;
+        display: none;
+      }
+      .user-list{
+        margin-left: -30px;
+        margin-top: 15px;
+
+        .user-info-box{
+          padding: 10px;
+          color: #777777;
+          font-size: 12px;
+          display: block;
+          min-height: 90px;
+          background: #f3f3f4;
+          border: 1px #f3f3f4 solid;
+          width: 100%;
+          box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+          border-radius: 2px;
+          margin-bottom: 15px;
+          cursor: pointer;
+          &.opt{
+            border: 1px solid #ff0000;
+          }
+          .info-box-sidebar{
+            width: 100px;
+            padding: 5px;
+            float: left;
+            display: block;
+
+            img{
+              width: 90px;
+              height: 90px;
+              object-fit: cover;
+              border: 3px solid #f1c40f;
+              border-radius: 50%;
+              opacity: 0.8;
+              margin-bottom: 10px;
+            }
+          }
+          .info-box-content{
+            margin-left: 110px;
+            padding: 5px;
+            line-height: 20px;
+
+            .info-box-nicks{
+              display: block;
+              font-size: 20px;
+              font-weight: bold;
+              padding-left: 3px;
+              padding-bottom: 5px;
+            }
+            .text-auto-hide{
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+
+              .fa{
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+              }
+            }
+          }
+        }
+
+      }
+      .pagination{
+        margin-left: -15px;
+      }
+    }
+    .fans-right{
+      border: 1px solid #dddddd;
+      border-bottom: none;
+      padding: 0;
+
+      .grouping-top{
+        font-size: 20px;
+        padding: 10px 0;
+        line-height: 20px;
+        background: #f4f5f9;
+        border-bottom: 1px solid #dddddd;
+
+        .add-group{
+          text-align: right;
+          cursor: pointer;
+        }
+      }
+      .grouping-list{
+
+        ul{
+          list-style: none;
+          padding: 0;
+          margin-bottom: 0;
+
+          .pitch{
+            background: #1c84c6;
+            color: #ffffff;
+            border: 1px solid #1c84c6;
+            margin: -1px;
+          }
+          li:hover{
+
+            .group-right .actions{
+              display: inline-block;
+            }
+          }
+          li{
+            padding: 10px 0;
+            border-bottom: 1px solid #dddddd;
+            cursor: pointer;
+
+            .all-user{
+              line-height: 25px;
+            }
+            .group-right{
+              text-align: right;
+
+              .actions{
+                margin-left: 5px;
+                display: none;
+              }
+              .user-num{
+                display: inline-block;
+                min-width: 10px;
+                padding: 5px 7px 2px;
+                font-size: 12px;
+                font-weight: 700;
+                color: #fff;
+                background-color: #777;
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.modal{
+
+  .modal-body{
+
+    .add-group{
+
+      input{
+        display: inline-block;
+        width: 165px;
+      }
+    }
+  }
+}
+.select2-container {
+
+  .select2-dropdown{
+    position: relative;
+    z-index: 2050;
+  }
+}
