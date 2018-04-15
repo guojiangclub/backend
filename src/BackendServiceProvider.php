@@ -1,9 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/4/14
- * Time: 22:37
+
+/*
+ * This file is part of ibrand/backend.
+ *
+ * (c) iBrand <https://www.ibrand.cc>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace iBrand\Backend;
@@ -13,32 +16,28 @@ use Illuminate\Support\ServiceProvider;
 
 class BackendServiceProvider extends ServiceProvider
 {
-
     /**
      * @var array
      */
     protected $commands = [
-        InstallCommand::class
+        InstallCommand::class,
     ];
 
     /**
      * Boot the service provider.
-     *
-     * @return void
      */
     public function boot()
     {
-        app('view')->prependNamespace('admin', __DIR__ . '/../resources/views');
+        app('view')->prependNamespace('admin', __DIR__.'/../resources/views');
 
         // merge configs
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/backend.php', 'ibrand.backend'
+            __DIR__.'/../config/backend.php', 'ibrand.backend'
         );
 
         if ($this->app->runningInConsole()) {
-
             $this->publishes([
-                __DIR__ . '/../config/backend.php' => config_path('ibrand/backend.php'),
+                __DIR__.'/../config/backend.php' => config_path('ibrand/backend.php'),
             ]);
 
             $this->publishes([__DIR__.'/../resources/assets' => public_path('vendor')]);
@@ -50,8 +49,6 @@ class BackendServiceProvider extends ServiceProvider
 
     /**
      * Register the service provider.
-     *
-     * @return void
      */
     public function register()
     {
@@ -68,5 +65,4 @@ class BackendServiceProvider extends ServiceProvider
 
         $this->app['config']->set('filesystems', $filesystems);
     }
-
 }

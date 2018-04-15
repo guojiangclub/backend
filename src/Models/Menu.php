@@ -1,12 +1,16 @@
 <?php
 
+/*
+ * This file is part of ibrand/backend.
+ *
+ * (c) iBrand <https://www.ibrand.cc>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace iBrand\Backend\Models;
 
-use Encore\Admin\Traits\AdminBuilder;
-use Encore\Admin\Traits\ModelTree;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Support\Facades\DB;
 use Encore\Admin\Auth\Database\Menu as BaseMenu;
 
 /**
@@ -20,17 +24,12 @@ class Menu extends BaseMenu
 {
 
     /**
-     * build sub tree.
+     * @param $nodes
      * @param $parentId
      * @return array
      */
-    public function subTree($parentId)
+    public function subTree($nodes, $parentId)
     {
-        $nodes = $this->allNodes();
-        //dd($nodes)
-        return $this->buildNestedArray($nodes,$parentId);
-
-        //$nodes = $this->
-        //return $this->();
+        return $this->buildNestedArray($nodes, $parentId);
     }
 }

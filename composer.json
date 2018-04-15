@@ -1,6 +1,6 @@
 {
     "name": "ibrand/backend",
-    "description": "laravel backend",
+    "description": "ibrand backend base laravel-admin",
     "type": "library",
     "keywords": ["laravel", "backend", "grid", "form"],
     "homepage": "https://github.com/ibrandcc/backend",
@@ -16,7 +16,8 @@
         "encore/laravel-admin": "~1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": "~6.0",
+        "orchestra/testbench": "~3.5"
     },
     "autoload": {
         "psr-4": {
