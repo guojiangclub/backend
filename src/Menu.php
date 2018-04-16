@@ -76,7 +76,7 @@ class Menu
     /**
      * @return array
      */
-    protected function getCurrentTopMenu(): array
+    protected function getCurrentTopMenu()
     {
         $prefix = trim(config('admin.route.prefix'), '/');
 

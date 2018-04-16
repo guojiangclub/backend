@@ -12,6 +12,7 @@
 namespace iBrand\Backend;
 
 use iBrand\Backend\Console\InstallCommand;
+use iBrand\Backend\Console\InstallExtensionsCommand;
 use Illuminate\Support\ServiceProvider;
 
 class BackendServiceProvider extends ServiceProvider
@@ -21,6 +22,7 @@ class BackendServiceProvider extends ServiceProvider
      */
     protected $commands = [
         InstallCommand::class,
+        InstallExtensionsCommand::class,
     ];
 
     /**

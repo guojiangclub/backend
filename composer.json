@@ -13,7 +13,12 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "encore/laravel-admin": "~1.0"
+        "encore/laravel-admin": "~1.0",
+        "laravel-admin-ext/helpers": "~1.0",
+        "laravel-admin-ext/scheduling": "~1.0",
+        "laravel-admin-ext/log-viewer": "~1.0",
+        "laravel-admin-ext/redis-manager": "~1.0",
+        "laravel-admin-ext/backup": "~1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.0",
@@ -28,7 +33,10 @@
         "laravel": {
             "providers": [
                 "iBrand\\Backend\\BackendServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "BackendMenu": "iBrand\\Backend\\Facades\\Menu"
+            }
         }
     }
 }
