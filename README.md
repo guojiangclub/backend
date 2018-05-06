@@ -49,7 +49,7 @@ php artisan ibrand:backend-install
 
 默认集成了 helpers,scheduling,log-viewer,redis-manager,backup 五个插件
 ```
-ibrand:backend-install-extensions
+php artisan ibrand:backend-install-extensions
 ```
 会初始化五个插件的菜单
 
