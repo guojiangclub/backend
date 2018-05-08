@@ -31,7 +31,7 @@ class MenuTablesSeeder extends Seeder
                 'order' => 1,
                 'title' => '系统管理',
                 'icon' => 'fa-tasks',
-                'uri' => 'setting',
+                'uri' => '/',
             ],
 
             [

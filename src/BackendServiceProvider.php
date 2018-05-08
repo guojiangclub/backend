@@ -57,7 +57,7 @@ class BackendServiceProvider extends ServiceProvider
         $this->commands($this->commands);
     }
 
-    protected function setAdminDisk(): void
+    protected function setAdminDisk()
     {
         $filesystems = config('filesystems');
 
