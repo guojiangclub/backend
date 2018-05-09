@@ -29,7 +29,7 @@
 
     <!-- REQUIRED CSS BY iBrand-->
 
-    <link rel="stylesheet" href="{{ admin_asset ("/vendor/libs/webuploader-0.1.5/webuploader.js") }}">
+    <link rel="stylesheet" href="{{ admin_asset ("/vendor/libs/webuploader-0.1.5/webuploader.css") }}">
 
     <link rel="stylesheet" href="{{ admin_asset("/vendor/inspinia/css/animate.css") }}">
     <link rel="stylesheet" href="{{ admin_asset("/vendor/inspinia/css/style.css") }}">
@@ -43,8 +43,10 @@
     <script src="{{ admin_asset ("/vendor/laravel-admin/AdminLTE/dist/js/app.min.js") }}"></script>
     <script src="{{ admin_asset ("/vendor/laravel-admin/jquery-pjax/jquery.pjax.js") }}"></script>
     <script src="{{ admin_asset ("/vendor/laravel-admin/nprogress/nprogress.js") }}"></script>
-
     <script src="{{ admin_asset ("/vendor/libs/jquery.form.min.js") }}"></script>
+
+    {!! \iBrand\Backend\Backend::js() !!}
+
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
