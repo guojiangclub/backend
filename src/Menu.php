@@ -82,13 +82,35 @@ class Menu
 
         $currentMenuUri = str_replace($prefix, '', request()->path());
 
-        //dd($currentMenuUri);
-
         $currentMenu = $this->collectNodes->filter(function ($value, $key) use ($currentMenuUri) {
             return $value['uri'] == trim($currentMenuUri, '/');
         })->first();
-        $currentTopMenu = $this->getCurrentTopMenuByNode($currentMenu);
 
+        $currentTopMenu = null;
+
+        if ($currentMenu) {
+            $currentTopMenu = $this->getCurrentTopMenuByNode($currentMenu);
+        } else {
+            $currentTopMenu = $this->getCurrentTopMenuByUri($currentMenuUri);
+        }
+        return $currentTopMenu;
+    }
+
+    /**
+     * @param $currentMenuUri
+     * @return mixed
+     */
+    protected function getCurrentTopMenuByUri($currentMenuUri)
+    {
+        $topMenus = $this->collectNodes->filter(function ($value, $key) {
+            return $value['parent_id'] == 0;
+        });
+        $topMenus->each(function ($item, $key) use ($currentMenuUri, &$currentTopMenu) {
+            $str = array_first(explode('/', trim($currentMenuUri, '/')));
+            if (str_contains($item['uri'], $str)) {
+                $currentTopMenu = $item;
+            }
+        });
         return $currentTopMenu;
     }
 }
