@@ -47,6 +47,8 @@ class BackendServiceProvider extends ServiceProvider
 
         //merge filesystem
         $this->setAdminDisk();
+
+        $this->registerMigrations();
     }
 
     /**
@@ -66,5 +68,13 @@ class BackendServiceProvider extends ServiceProvider
         $filesystems['disks'] = $disks;
 
         $this->app['config']->set('filesystems', $filesystems);
+    }
+
+    /**
+     * 数据迁移.
+     */
+    protected function registerMigrations()
+    {
+        return $this->loadMigrationsFrom(__DIR__ . '/../migrations');
     }
 }

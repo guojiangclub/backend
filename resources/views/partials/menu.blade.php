@@ -2,9 +2,9 @@
     @if(!isset($item['children']))
         <li>
             @if(url()->isValidUrl($item['uri']))
-                <a href="{{ $item['uri'] }}" target="_blank">
+                <a href="{{ $item['uri'] }}" target="_blank"  @if($item['blank']==1) no-pjax @endif  >
             @else
-                 <a href="{{ admin_base_path($item['uri']) }}">
+                 <a href="{{ admin_base_path($item['uri']) }}" @if($item['blank']==1) no-pjax @endif >
             @endif
                 <i class="fa {{$item['icon']}}"></i>
                 <span>{{$item['title']}}</span>
@@ -12,7 +12,7 @@
         </li>
     @else
         <li class="treeview">
-            <a href="#">
+            <a href="#" @if($item['blank']==1) no-pjax @endif>
                 <i class="fa {{$item['icon']}}"></i>
                 <span>{{$item['title']}}</span>
                 <span class="fa arrow"></span>

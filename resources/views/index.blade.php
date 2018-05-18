@@ -57,6 +57,7 @@
         window._token = "{{ csrf_token() }}";
     </script>
 
+
 </head>
 
 <body class="hold-transition {{config('admin.skin')}} {{join(' ', config('admin.layout'))}}">
@@ -121,7 +122,7 @@
 <script src="{{ admin_asset ("/vendor/laravel-admin/bootstrap3-editable/js/bootstrap-editable.min.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/laravel-admin/sweetalert/dist/sweetalert.min.js") }}"></script>
 {!! Admin::js() !!}
-<script src="{{ admin_asset ("/vendor/laravel-admin/laravel-admin/laravel-admin.js") }}"></script>
+{{--<script src="{{ admin_asset ("/vendor/laravel-admin/laravel-admin/laravel-admin.js") }}"></script>--}}
 
 <!-- REQUIRED JS SCRIPTS BY iBrand-->
 <script src="{{ admin_asset ("/vendor/libs/jquery.form.min.js") }}"></script>
@@ -129,5 +130,6 @@
 <script src="{{ admin_asset("/vendor/inspinia/js/plugins/metisMenu/jquery.metisMenu.js") }}"></script>
 <script src="{{ admin_asset("/vendor/inspinia/js/inspinia.js") }}"></script>
 <script src="{{ admin_asset("/vendor/inspinia/js/plugins/pace/pace.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/libs/laravel-admin.js") }}"></script>
 </body>
 </html>
