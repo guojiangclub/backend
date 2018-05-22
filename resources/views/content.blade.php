@@ -9,7 +9,7 @@
             </h2>
             @if ($breadcrumb)
                 <ol class="breadcrumb" style="margin-right: 30px;">
-                    <li><a href="{{ admin_url('/') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a  no-pjax href="{{ admin_url('/') }}"><i class="fa fa-dashboard"></i> Home</a></li>
                     @foreach($breadcrumb as $item)
                         @if($loop->last)
                             <li class="active">
@@ -20,7 +20,14 @@
                             </li>
                         @else
                             <li>
-                                <a href="{{ admin_url(array_get($item, 'url')) }}">
+                                <a
+
+                                    @if (array_has($item, 'no-pjax'))
+                                       no-pjax
+                                    @endif
+
+                                    href="{{ admin_url(array_get($item, 'url')) }}">
+
                                     @if (array_has($item, 'icon'))
                                         <i class="fa fa-{{ $item['icon'] }}"></i>
                                     @endif
