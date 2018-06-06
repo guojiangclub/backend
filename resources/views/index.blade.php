@@ -27,14 +27,16 @@
     <link rel="stylesheet" href="{{ admin_asset("/vendor/laravel-admin/google-fonts/fonts.css") }}">
     <link rel="stylesheet" href="{{ admin_asset("/vendor/laravel-admin/AdminLTE/dist/css/AdminLTE.min.css") }}">
 
+    <!-- iconfont CSS-->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_u5095o4vzog8pvi.css">
     <!-- REQUIRED CSS BY iBrand-->
-
     <link rel="stylesheet" href="{{ admin_asset ("/vendor/libs/webuploader-0.1.5/webuploader.css") }}">
-
     <link rel="stylesheet" href="{{ admin_asset("/vendor/inspinia/css/animate.css") }}">
     <link rel="stylesheet" href="{{ admin_asset("/vendor/inspinia/css/style.css") }}">
     <link rel="stylesheet" href="{{ admin_asset("/vendor/inspinia/css/main.css") }}">
     <link rel="stylesheet" href="{{ admin_asset("/vendor/inspinia/css/admin.css") }}">
+
+
 
     <!-- REQUIRED JS SCRIPTS -->
     <script src="{{ admin_asset ("/vendor/laravel-admin/AdminLTE/plugins/jQuery/jQuery-2.1.4.min.js") }}"></script>

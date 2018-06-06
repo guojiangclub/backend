@@ -6,14 +6,26 @@
             @else
                  <a href="{{ admin_base_path($item['uri']) }}" @if($item['blank']==1) no-pjax @endif >
             @endif
+
+                @if(strpos($item['icon'],'fa')==0)
                 <i class="fa {{$item['icon']}}"></i>
+                @else
+                 <i class="{{$item['icon']}}"></i>
+                @endif
+
                 <span>{{$item['title']}}</span>
             </a>
         </li>
     @else
         <li class="treeview">
             <a href="#" @if($item['blank']==1) no-pjax @endif>
-                <i class="fa {{$item['icon']}}"></i>
+
+                @if(strpos($item['icon'],'fa')==0)
+                    <i class="fa {{$item['icon']}}"></i>
+                @else
+                    <i class="{{$item['icon']}}"></i>
+                @endif
+
                 <span>{{$item['title']}}</span>
                 <span class="fa arrow"></span>
             </a>

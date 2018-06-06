@@ -71,9 +71,6 @@
                     <button type="button" class="btn btn-primary btn-block btn-flat send-verifi" data-target="login" data-status=0>发送验证码</button>
             </div>
             @endif
-
-
-
             <div class="row">
 
                 <!-- /.col -->
