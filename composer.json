@@ -18,7 +18,8 @@
         "laravel-admin-ext/scheduling": "~1.0",
         "laravel-admin-ext/log-viewer": "~1.0",
         "laravel-admin-ext/redis-manager": "~1.0",
-        "laravel-admin-ext/backup": "~1.0"
+        "laravel-admin-ext/backup": "~1.0",
+        "ibrand/laravel-sms": "~1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.0",

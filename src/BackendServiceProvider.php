@@ -11,9 +11,11 @@
 
 namespace iBrand\Backend;
 
+use function foo\func;
 use iBrand\Backend\Console\InstallCommand;
 use iBrand\Backend\Console\InstallExtensionsCommand;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Route;
 
 class BackendServiceProvider extends ServiceProvider
 {
@@ -24,6 +26,8 @@ class BackendServiceProvider extends ServiceProvider
         InstallCommand::class,
         InstallExtensionsCommand::class,
     ];
+
+    protected $namespace = 'iBrand\Backend\Http\Controllers';
 
     /**
      * Boot the service provider.
@@ -49,6 +53,8 @@ class BackendServiceProvider extends ServiceProvider
         $this->setAdminDisk();
 
         $this->registerMigrations();
+
+        $this->mapWebRoutes();
     }
 
     /**
@@ -76,5 +82,34 @@ class BackendServiceProvider extends ServiceProvider
     protected function registerMigrations()
     {
         return $this->loadMigrationsFrom(__DIR__ . '/../migrations');
+    }
+
+    protected function mapWebRoutes()
+    {
+
+        $attributes = [
+            'prefix'     => config('admin.route.prefix'),
+            'namespace'  => $this->namespace,
+            'middleware' => config('admin.route.middleware'),
+        ];
+
+        Route::group($attributes, function ($router) {
+
+            $router->get('auth/login', 'AuthAdminController@getLogin')->name('auth.admin.login');
+
+            $router->post('auth/login', 'AuthAdminController@postLogin')->name('auth.admin.login.post');
+
+            $router->post('logout', 'AuthAdminController@getLogout');
+
+            $router->get('auth/setting', 'AuthAdminController@getSetting');
+
+            $router->put('auth/setting', 'AuthAdminController@putSetting');
+
+        });
+
+        Route::group(['namespace'  => $this->namespace,], function ($router) {
+            $router->post('getMobile', 'AuthAdminController@getMobile');
+        });
+
     }
 }
