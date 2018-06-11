@@ -1,13 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/4/16
- * Time: 12:00
+
+/*
+ * This file is part of ibrand/backend.
+ *
+ * (c) iBrand <https://www.ibrand.cc>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace iBrand\Backend\Console;
-
 
 use Encore\Admin\Auth\Database\Menu;
 use Encore\Admin\Auth\Database\Permission;
@@ -110,7 +112,7 @@ class InstallExtensionsCommand extends Command
         Permission::create([
             'name' => 'Admin helpers',
             'slug' => 'ext.helpers',
-            'http_path' => '/' . trim('helpers/*', '/'),
+            'http_path' => '/'.trim('helpers/*', '/'),
         ]);
     }
 
@@ -133,7 +135,7 @@ class InstallExtensionsCommand extends Command
         Permission::create([
             'name' => 'Redis Manager',
             'slug' => 'ext.redis-manager',
-            'http_path' => '/' . trim('redis*', '/'),
+            'http_path' => '/'.trim('redis*', '/'),
         ]);
     }
 
@@ -157,7 +159,7 @@ class InstallExtensionsCommand extends Command
         Permission::create([
             'name' => 'Logs',
             'slug' => 'ext.log-viewer',
-            'http_path' => '/' . trim('logs*', '/'),
+            'http_path' => '/'.trim('logs*', '/'),
         ]);
     }
 
@@ -180,7 +182,7 @@ class InstallExtensionsCommand extends Command
         Permission::create([
             'name' => 'Backup',
             'slug' => 'ext.backup',
-            'http_path' => '/' . trim('backup*', '/'),
+            'http_path' => '/'.trim('backup*', '/'),
         ]);
     }
 
@@ -203,9 +205,7 @@ class InstallExtensionsCommand extends Command
         Permission::create([
             'name' => 'Scheduling',
             'slug' => 'ext.scheduling',
-            'http_path' => '/' . trim('scheduling*', '/'),
+            'http_path' => '/'.trim('scheduling*', '/'),
         ]);
     }
-
-
 }

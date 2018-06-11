@@ -36,7 +36,7 @@ class Menu
     public function topMenu()
     {
         $topMenus = $this->collectNodes->filter(function ($value, $key) {
-            return $value['parent_id'] == 0;
+            return 0 == $value['parent_id'];
         });
 
         $currentTopMenu = $this->currentTopMenu;
@@ -47,6 +47,7 @@ class Menu
             } else {
                 $value['class'] = '';
             }
+
             return $value;
         })->all();
 
@@ -55,14 +56,13 @@ class Menu
 
     public function getCurrentTopMenuByNode($currentNode)
     {
-        if ($currentNode['parent_id'] == 0) {
+        if (0 == $currentNode['parent_id']) {
             return $currentNode;
         }
 
         $currentNode = $this->collectNodes->filter(function ($value, $key) use ($currentNode) {
             return $value['id'] == $currentNode['parent_id'];
-        })->first();;
-
+        })->first();
 
         return $this->getCurrentTopMenuByNode($currentNode);
     }
@@ -70,6 +70,7 @@ class Menu
     public function sideMenu()
     {
         $topMenuId = $this->currentTopMenu['id'];
+
         return $this->dataMenu->subTree($this->allNodes, $topMenuId);
     }
 
@@ -93,17 +94,19 @@ class Menu
         } else {
             $currentTopMenu = $this->getCurrentTopMenuByUri($currentMenuUri);
         }
+
         return $currentTopMenu;
     }
 
     /**
      * @param $currentMenuUri
+     *
      * @return mixed
      */
     protected function getCurrentTopMenuByUri($currentMenuUri)
     {
         $topMenus = $this->collectNodes->filter(function ($value, $key) {
-            return $value['parent_id'] == 0;
+            return 0 == $value['parent_id'];
         });
         $topMenus->each(function ($item, $key) use ($currentMenuUri, &$currentTopMenu) {
             $str = array_first(explode('/', trim($currentMenuUri, '/')));
@@ -111,6 +114,7 @@ class Menu
                 $currentTopMenu = $item;
             }
         });
+
         return $currentTopMenu;
     }
 }

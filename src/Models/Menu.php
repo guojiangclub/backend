@@ -22,10 +22,10 @@ use Encore\Admin\Auth\Database\Menu as BaseMenu;
  */
 class Menu extends BaseMenu
 {
-
     /**
      * @param $nodes
      * @param $parentId
+     *
      * @return array
      */
     public function subTree($nodes, $parentId)

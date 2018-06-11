@@ -133,6 +133,7 @@
 <script src="{{ admin_asset("/vendor/inspinia/js/inspinia.js") }}"></script>
 <script src="{{ admin_asset("/vendor/inspinia/js/plugins/pace/pace.min.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/libs/laravel-admin.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/libs/icheck.min.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/libs/plugins.js") }}"></script>
 </body>
 </html>

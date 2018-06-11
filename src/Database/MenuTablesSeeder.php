@@ -25,7 +25,6 @@ class MenuTablesSeeder extends Seeder
         // add default menus.
         Menu::truncate();
         Menu::insert([
-
             [
                 'parent_id' => 0,
                 'order' => 1,

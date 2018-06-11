@@ -14,8 +14,7 @@ namespace iBrand\Backend\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class Menu
- * @package iBrand\Backend\Facades
+ * Class Menu.
  */
 class Menu extends Facade
 {

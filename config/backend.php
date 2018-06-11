@@ -1,9 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/4/15
- * Time: 11:51
+
+/*
+ * This file is part of ibrand/backend.
+ *
+ * (c) iBrand <https://www.ibrand.cc>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 return [
@@ -28,13 +31,11 @@ return [
     'title' => 'iBrand 管理后台',
 
     'disks' => [
-
         'admin' => [
             'driver' => 'local',
             'root' => storage_path('app/public/backend'),
             'url' => env('APP_URL').'/storage/backend',
             'visibility' => 'public',
         ],
-
     ],
 ];

@@ -11,11 +11,10 @@
 
 namespace iBrand\Backend;
 
-use function foo\func;
 use iBrand\Backend\Console\InstallCommand;
 use iBrand\Backend\Console\InstallExtensionsCommand;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\ServiceProvider;
 
 class BackendServiceProvider extends ServiceProvider
 {
@@ -81,20 +80,18 @@ class BackendServiceProvider extends ServiceProvider
      */
     protected function registerMigrations()
     {
-        return $this->loadMigrationsFrom(__DIR__ . '/../migrations');
+        return $this->loadMigrationsFrom(__DIR__.'/../migrations');
     }
 
     protected function mapWebRoutes()
     {
-
         $attributes = [
-            'prefix'     => config('admin.route.prefix'),
-            'namespace'  => $this->namespace,
+            'prefix' => config('admin.route.prefix'),
+            'namespace' => $this->namespace,
             'middleware' => config('admin.route.middleware'),
         ];
 
         Route::group($attributes, function ($router) {
-
             $router->get('auth/login', 'AuthAdminController@getLogin')->name('auth.admin.login');
 
             $router->post('auth/login', 'AuthAdminController@postLogin')->name('auth.admin.login.post');
@@ -104,12 +101,15 @@ class BackendServiceProvider extends ServiceProvider
             $router->get('auth/setting', 'AuthAdminController@getSetting');
 
             $router->put('auth/setting', 'AuthAdminController@putSetting');
-
         });
 
-        Route::group(['namespace'  => $this->namespace,], function ($router) {
+        Route::group(['namespace' => $this->namespace], function ($router) {
             $router->post('getMobile', 'AuthAdminController@getMobile');
-        });
 
+            $router->group(['prefix' => 'export'], function () use ($router) {
+                $router->get('/', 'ExportController@index')->name('admin.export.index');
+                $router->get('downLoadFile', 'ExportController@downLoadFile')->name('admin.export.downLoadFile');
+            });
+        });
     }
 }
