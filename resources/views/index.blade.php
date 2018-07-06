@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="{{ admin_asset("/vendor/inspinia/css/style.css") }}">
     <link rel="stylesheet" href="{{ admin_asset("/vendor/inspinia/css/main.css") }}">
     <link rel="stylesheet" href="{{ admin_asset("/vendor/inspinia/css/admin.css") }}">
+    <link rel="stylesheet" href="{{ admin_asset("/vendor/css/plugins/iCheck/custom.css") }}">
 
 
 
@@ -110,7 +111,6 @@
 </div>
 
 <!-- ./wrapper -->
-
 <script>
     function LA() {
     }
@@ -135,5 +135,6 @@
 <script src="{{ admin_asset ("/vendor/libs/laravel-admin.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/libs/icheck.min.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/libs/plugins.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/libs/active.js") }}"></script>
 </body>
 </html>

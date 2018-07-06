@@ -3,7 +3,7 @@
 @section('content')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-12">
-            <h2>
+            <h2 id="title_name" data-title="{{ $header or trans('admin.title') }}">
                 {{ $header or trans('admin.title') }}
                 <small>{{ $description or trans('admin.description') }}</small>
             </h2>
@@ -12,7 +12,10 @@
                     <li><a  no-pjax href="{{ admin_url('/') }}"><i class="fa fa-dashboard"></i> Home</a></li>
                     @foreach($breadcrumb as $item)
                         @if($loop->last)
-                            <li class="active">
+                            <li class="active"
+                                    @if (array_has($item, 'left-menu-active'))
+                                        id="left-menu-active" data-left-menu-active="{{$item['left-menu-active']}}"
+                                    @endif>
                                 @if (array_has($item, 'icon'))
                                     <i class="fa fa-{{ $item['icon'] }}"></i>
                                 @endif

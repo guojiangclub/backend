@@ -29,7 +29,7 @@
                 <span>{{$item['title']}}</span>
                 <span class="fa arrow"></span>
             </a>
-            <ul class="treeview-menu nav nav-second-level">
+            <ul class="treeview-menu nav nav-second-level collapse">
                 @foreach($item['children'] as $item)
                     @include('admin::partials.menu', $item)
                 @endforeach
