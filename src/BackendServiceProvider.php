@@ -92,6 +92,9 @@ class BackendServiceProvider extends ServiceProvider
         ];
 
         Route::group($attributes, function ($router) {
+
+            $router->get('login', 'AuthAdminController@getLogin')->name('auth.admin.login');
+
             $router->get('auth/login', 'AuthAdminController@getLogin')->name('auth.admin.login');
 
             $router->post('auth/login', 'AuthAdminController@postLogin')->name('auth.admin.login.post');
