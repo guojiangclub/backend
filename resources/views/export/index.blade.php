@@ -25,7 +25,7 @@
 @stop
 
 <script src="{{ admin_asset ("/vendor/libs/ladda/spin.min.js") }}"></script>
-<script src="{{ admin_asset ("/vendor/libs/libs/ladda/ladda.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/libs/ladda/ladda.min.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/libs/ladda/ladda.jquery.min.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/libs/loader/jquery.loader.min.js") }}"></script>
 
