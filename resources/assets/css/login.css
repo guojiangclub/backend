@@ -1,0 +1,232 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+    background: #1c202d;
+}
+body{
+    height: 100%;
+    background: #1c202d;
+
+}
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var {
+    margin: 0;
+    padding: 0
+}
+
+ol, ul {
+    list-style: none
+}
+
+:focus {
+    outline: 0
+}
+
+a img {
+    border: 0
+}
+
+img {
+    vertical-align: middle
+}
+
+table {
+    empty-cells: show
+}
+
+ins {
+    text-decoration: none
+}
+
+del {
+    text-decoration: line-through
+}
+
+em {
+    font-style: normal
+}
+
+button::-moz-focus-inner, input[type=button]::-moz-focus-inner, input[type=file] > input[type=button]::-moz-focus-inner, input[type=reset]::-moz-focus-inner, input[type=submit]::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+.hide {
+    display: none
+}
+
+a {
+    color: #666;
+    text-decoration: none
+}
+
+a:hover {
+    color: #E4393C;
+    text-decoration: underline
+}
+
+.w {
+    width: 990px;
+    margin: 0 auto
+}
+
+#banner-bg {
+    background: url('../img/brand_02.png') 0px 0px no-repeat;
+}
+#content {
+    clear: both
+}
+#content .login-wrap {
+    margin-top: 0
+}
+
+#content .tips-wrapper {
+    background: #fff8f0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center
+}
+
+#content .tips-wrapper .cont-wrapper {
+    display: inline-block;
+    *display: inline;
+    width: 90%
+}
+
+#content .tips-wrapper .tips-inner p {
+    vertical-align: middle;
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+    *display: inline
+}
+
+#content .tips-wrapper .tips-inner .black {
+    color: #333
+}
+
+
+
+.login-form {
+    position: relative;
+    z-index: 4;
+    background: #fff;
+    overflow: visible;
+    width: 400px;
+    border-radius: 4px;
+}
+.logo {
+    margin-bottom: 40px;
+}
+.login-form .login-box {
+    padding: 33px 25px;
+}
+.login-form .login-box .logo img{
+    width: 100%;
+}
+
+.login-form .login-box .inptu-box {
+    width: 100%;
+}
+
+.login-form .login-box .inptu-box input {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 1px solid #A0A0A0;
+    margin-bottom: 22px;
+}
+.code-box {
+    display: flex;
+    align-content: center;
+}
+.login-form .login-box .code-box input {
+    margin-bottom: 0;
+    width: 60%;
+}
+.login-form .login-box .code-box .code {
+    cursor: pointer;
+    flex: 1;
+    background: #2BC0BE;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: 20px;
+    line-height: 40px;
+}
+.login {
+    cursor: pointer;
+    margin-top: 22px;
+    background: #2BC0BE;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 2px;
+    width: 100%;
+    border: none;
+}
+
+.login-wrap {
+    position: relative;
+    height: 475px;
+    margin: 10px 0 20px;
+    z-index: 5
+}
+
+.login-wrap .login-banner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 475px;
+    background: #1C202D
+}
+
+.login-wrap .i-inner {
+    position: relative;
+    z-index: 3;
+    height: 475px
+}
+
+.login-wrap .login-form {
+    float: right;
+    top: 40px
+}
+
+
+
+.clearfix {
+    zoom: 1;
+}
+.hello-box {
+    margin-top: 80px;
+}
+.hello {
+    font-size: 56px;
+}
+
+.login-wrap .text-box {
+    margin-left: 100px;
+    font-size: 16px;
+    position: relative;
+    z-index: 10;
+    color: #ffffff;
+    float: left;
+    height: 365px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info {
+    color: #555555;
+    font-size: 14px;
+}

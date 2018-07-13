@@ -29,7 +29,7 @@ class AuthAdminController extends AuthController
             return redirect($this->redirectPath());
         }
 
-        return view('admin::admin-login');
+        return view('admin::admin-login-ibrand');
     }
 
     public function postLogin(Request $request)
@@ -37,6 +37,7 @@ class AuthAdminController extends AuthController
         $username = !$this->isMail(request($this->username())) ? 'username' : 'email';
 
         $credentials = $request->only([$this->username(), 'password', 'code']);
+
 
         if (settings('admin_sms_login_status')) {
             $admin = Administrator::where("$username", request('username'))->where('status', 1)->first();
