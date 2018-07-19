@@ -8,19 +8,20 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace iBrand\Backend\Models;
 
-use Encore\Admin\Auth\Database\Administrator;
+use Illuminate\Database\Eloquent\Model;
 
-/**
- * Class Administrator.
- *
- * @property Role[] $roles
- */
-class Admin extends Administrator{
 
-    public function Notifications()
+class AdminNotifications extends Model
+{
+    protected $table = 'el_admin_notifications';
+
+    protected $guarded = ['id'];
+
+    public function admin()
     {
-        return $this->hasMany(AdminNotifications::class);
+        return $this->belongsTo(Admin::class);
     }
 }

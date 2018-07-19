@@ -93,6 +93,14 @@ class BackendServiceProvider extends ServiceProvider
 
         Route::group($attributes, function ($router) {
 
+            $router->group([], function ($router) {
+
+                $router->resource('auth/users', 'UserController');
+
+                $router->resource('auth/menu', 'MenuController', ['except' => ['create']]);
+
+            });
+
             $router->get('login', 'AuthAdminController@getLogin')->name('auth.admin.login');
 
             $router->get('auth/login', 'AuthAdminController@getLogin')->name('auth.admin.login');
