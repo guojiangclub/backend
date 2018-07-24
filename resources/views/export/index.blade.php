@@ -35,7 +35,14 @@
     <script>
 
         var get_data_url=$('#{{$toggle}}').data('link');
+
+        if(typeof link_get_data_url!="undefined"){
+            var get_data_url=link_get_data_url;
+            delete window.link_get_data_url;
+        }
+
         console.log(get_data_url);
+
 
         var downUrl='{{route('admin.export.downLoadFile')}}';
 
