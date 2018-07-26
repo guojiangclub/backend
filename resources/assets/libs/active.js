@@ -1,5 +1,8 @@
 $(function  () {
     if($("#left-menu-active").length>0){
+        $("a").each(function () {
+            $(this).attr('no-pjax',1);
+        });
         var active=$("#left-menu-active").data('left-menu-active');
         $("span").each(function() {
             if ($(this).text() == active) {
