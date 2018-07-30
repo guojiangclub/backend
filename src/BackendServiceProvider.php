@@ -80,7 +80,13 @@ class BackendServiceProvider extends ServiceProvider
      */
     protected function registerMigrations()
     {
-        return $this->loadMigrationsFrom(__DIR__.'/../migrations');
+          try{
+            if(DB::table('admin_users')->where('username','admin')->first()){
+                return $this->loadMigrationsFrom(__DIR__.'/../migrations');
+            }
+        } catch(\Exception $exception){
+
+        }
     }
 
     protected function mapWebRoutes()
