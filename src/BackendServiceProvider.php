@@ -15,6 +15,7 @@ use iBrand\Backend\Console\InstallCommand;
 use iBrand\Backend\Console\InstallExtensionsCommand;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use DB;
 
 class BackendServiceProvider extends ServiceProvider
 {
