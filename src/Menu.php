@@ -109,8 +109,9 @@ class Menu
             return 0 == $value['parent_id'];
         });
         $topMenus->each(function ($item, $key) use ($currentMenuUri, &$currentTopMenu) {
-            $str = array_first(explode('/', trim($currentMenuUri, '/')));
-            if (str_contains($item['uri'], $str)) {
+            $currentUri = array_first(explode('/', trim($currentMenuUri, '/')));
+            $itemUri = array_first(explode('/', trim($item['uri'], '/')));
+            if ($currentUri == $itemUri) {
                 $currentTopMenu = $item;
             }
         });
