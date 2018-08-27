@@ -21,6 +21,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
+
 class AuthAdminController extends AuthController
 {
     public function getLogin()
@@ -132,7 +133,7 @@ class AuthAdminController extends AuthController
         return preg_match($RegExp, $Argv) ? $Argv : false;
     }
 
-    public function getSetting()
+    public function getSetting(Content $content)
     {
         return Admin::content(function (Content $content) {
             $content->header(trans('admin.user_setting'));
