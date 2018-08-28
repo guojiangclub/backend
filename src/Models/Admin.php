@@ -19,7 +19,7 @@ use Encore\Admin\Auth\Database\Administrator;
  */
 class Admin extends Administrator{
 
-    public function Notifications()
+    public function adminNotifications()
     {
         return $this->hasMany(AdminNotifications::class);
     }
