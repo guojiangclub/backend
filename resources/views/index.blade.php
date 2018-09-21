@@ -14,8 +14,6 @@
           href="{{ admin_asset("/vendor/laravel-admin/AdminLTE/dist/css/skins/" . config('admin.skin') .".min.css") }}">--}}
 
     {!! Admin::css() !!}
-    <link rel="stylesheet" href="{{ admin_asset("/vendor/laravel-admin/sweetalert/dist/sweetalert.css") }}">
-
     <!-- iconfont CSS-->
     <link rel="stylesheet" href="//at.alicdn.com/t/font_u5095o4vzog8pvi.css">
     <!-- REQUIRED CSS BY iBrand-->
@@ -103,9 +101,7 @@
 </script>
 
 <!-- REQUIRED JS SCRIPTS -->
-<script src="{{ admin_asset ("/vendor/laravel-admin/sweetalert/dist/sweetalert.min.js") }}"></script>
 {!! Admin::js() !!}
-
 <!-- REQUIRED JS SCRIPTS BY iBrand-->
 <script src="{{ admin_asset ("/vendor/libs/jquery.form.min.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/libs/webuploader-0.1.5/webuploader.js") }}"></script>
