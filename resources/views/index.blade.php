@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{{ admin_asset("/vendor/inspinia/css/main.css") }}">
     <link rel="stylesheet" href="{{ admin_asset("/vendor/inspinia/css/admin.css") }}">
     <link rel="stylesheet" href="{{ admin_asset("/vendor/css/plugins/iCheck/custom.css") }}">
-    <link rel="stylesheet" href="{{ admin_asset("/vendor/laravel-admin/sweetalert2/dist/sweetalert2.css") }}">
+
 
 
     <!-- REQUIRED JS SCRIPTS -->
@@ -112,6 +112,5 @@
 <script src="{{ admin_asset ("/vendor/libs/icheck.min.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/libs/plugins.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/libs/active.js") }}"></script>
-<script src="{{ admin_asset ("/vendor/laravel-admin/sweetalert2/dist/sweetalert2.min.js") }}"></script>
 </body>
 </html>
