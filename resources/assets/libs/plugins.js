@@ -73,6 +73,8 @@ $(function(){
         radioClass: 'iradio_square-green',
         increaseArea: '20%'
     });
+    
+	$('.btn-dropbox').find('input').iCheck('destroy');
 
 
     // input 单选框全选or 全取消
