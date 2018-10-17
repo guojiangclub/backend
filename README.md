@@ -18,6 +18,7 @@
 composer require ibrand/backend:~1.0 -vvv
 ```
 
+
 ### 低于 Laravel5.5 版本
 
 `config/app.php` 文件中 `providers` 添加
