@@ -24,7 +24,7 @@ toastr.options = {
 
 $.pjax.defaults.timeout = 5000;
 $.pjax.defaults.maxCacheLength = 0;
-$(document).pjax('a:not(a[target="_blank"],a[no-pjax])', {
+$(document).pjax('a:not(a[target="_blank"])', {
     container: '#pjax-container'
 });
 
@@ -54,7 +54,7 @@ $(document).on('pjax:send', function (xhr) {
             $submit_btn.button('loading')
         }
     }
-    NProgress.start();
+    /*NProgress.start();*/
 });
 
 $(document).on('pjax:complete', function (xhr) {
@@ -64,7 +64,7 @@ $(document).on('pjax:complete', function (xhr) {
             $submit_btn.button('reset')
         }
     }
-    NProgress.done();
+    /*NProgress.done();*/
 });
 
 $(function () {

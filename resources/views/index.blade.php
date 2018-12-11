@@ -93,14 +93,11 @@
 
 <!-- REQUIRED JS SCRIPTS -->
 {!! Admin::js() !!}
-{{--<script src="{{ admin_asset ("/vendor/laravel-admin/laravel-admin/laravel-admin.js") }}"></script>--}}
 
 <!-- REQUIRED JS SCRIPTS BY iBrand-->
 <script src="{{ admin_asset ("/vendor/libs/webuploader-0.1.5/webuploader.js") }}"></script>
 <script src="{{ admin_asset("/vendor/inspinia/js/plugins/metisMenu/jquery.metisMenu.js") }}"></script>
 <script src="{{ admin_asset("/vendor/inspinia/js/inspinia.js") }}"></script>
-<script src="{{ admin_asset("/vendor/inspinia/js/plugins/pace/pace.min.js") }}"></script>
-<script src="{{ admin_asset ("/vendor/libs/laravel-admin.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/libs/icheck.min.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/libs/plugins.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/libs/active.js") }}"></script>
