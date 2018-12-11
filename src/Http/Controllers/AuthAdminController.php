@@ -40,7 +40,7 @@ class AuthAdminController extends AuthController
         $credentials = $request->only([$this->username(), 'password', 'code']);
 
 
-        if (settings('admin_sms_login_status')) {
+        if (config('ibrand.backend.sms_login')) {
             $admin = Administrator::where("$username", request('username'))->where('status', 1)->first();
 
             if (!$admin or !$admin->mobile) {

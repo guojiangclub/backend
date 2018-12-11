@@ -25,7 +25,6 @@
 		"laravel-admin-ext/redis-manager": "~1.0",
 		"laravel-admin-ext/backup": "~1.0",
 		"ibrand/laravel-sms": "~1.0",
-		"ibrand/setting": "~1.0",
 		"maatwebsite/excel": "~2.1.23"
 	},
 	"require-dev": {
