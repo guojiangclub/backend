@@ -18,7 +18,7 @@
 	],
 	"require": {
 		"php": ">=7.0.0",
-		"encore/laravel-admin": "~1.6",
+		"encore/laravel-admin": "dev-ibrand as 1.6.7",
 		"laravel-admin-ext/helpers": "~1.0",
 		"laravel-admin-ext/scheduling": "~1.0",
 		"laravel-admin-ext/log-viewer": "~1.0",
@@ -45,5 +45,11 @@
 				"BackendMenu": "iBrand\\Backend\\Facades\\Menu"
 			}
 		}
-	}
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/ibrandcc/laravel-admin"
+		}
+	]
 }
