@@ -15,7 +15,7 @@
 ## 安装
 
 ```
-composer require ibrand/backend:~1.0 -vvv
+composer require ibrand/backend:~2.0 -vvv
 ```
 
 
