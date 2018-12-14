@@ -18,7 +18,7 @@
 	],
 	"require": {
 		"php": ">=7.0.0",
-		"encore/laravel-admin": "dev-ibrand-saas",
+		"encore/laravel-admin": "dev-ibrand-saas as 1.6.7",
 		"laravel-admin-ext/helpers": "1.0.2",
 		"laravel-admin-ext/scheduling": "1.0.1",
 		"laravel-admin-ext/log-viewer": "1.0.2",
