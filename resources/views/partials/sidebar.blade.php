@@ -1,17 +1,27 @@
-
 <!-- 左侧头像及菜单-->
 <nav class="navbar-default navbar-static-side" role="navigation">
     <div class="sidebar-collapse">
         <ul class="nav metismenu" id="side-menu">
             <li class="nav-header">
-                <div class="dropdown profile-element"> <span>
-                            <img alt="image" style="width: 64px;" class="img-circle"
-                                 src="{{ Admin::user()->avatar }}"/>
-                             </span>
-                </div>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        {{$_COOKIE['ibrand_log_application_name']}}
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{env('APP_URL').'/account/index'}}">切换应用</a></li>
+                        <li>
+                            <a href="{{ url('admin/logout') }}"
+                               onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                <i class="fa fa-sign-out"></i>退出登录
+                            </a></li>
 
-                <div class="logo-element">
-                    {{config('ibrand.backend.logo-mini')}}
+                        <form id="logout-form" action="{{ url('admin/logout') }}" method="POST"
+                              style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </ul>
                 </div>
             </li>
 
