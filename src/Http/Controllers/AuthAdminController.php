@@ -106,11 +106,11 @@ class AuthAdminController extends AuthController
     public function getLogout(Request $request)
     {
         $this->guard()->logout();
-        Auth::guard('account')->logout();
 
         $request->session()->invalidate();
 
-        return redirect(env('APP_URL').'/account/login');
+        return redirect(config('admin.route.prefix'));
+
     }
 
     /**

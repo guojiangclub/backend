@@ -34,8 +34,10 @@ return [
         'admin' => [
             'driver' => 'local',
             'root' => storage_path('app/public/backend'),
-            'url' => env('APP_URL').'/storage/backend',
+            'url' => env('APP_URL') . '/storage/backend',
             'visibility' => 'public',
         ],
     ],
+
+    'scenario' => env('BACKEND_SCENARIO', 'normal')
 ];
