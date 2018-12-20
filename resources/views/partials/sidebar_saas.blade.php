@@ -5,7 +5,7 @@
             <li class="nav-header">
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        {{$_COOKIE['ibrand_log_application_name']}}
+                        {{\Illuminate\Support\Facades\Cookie::get('ibrand_log_application_name')}}
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
