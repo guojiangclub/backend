@@ -21,8 +21,8 @@ class AddMobileToAdminUsersTable extends Migration
     public function up()
     {
         Schema::table('admin_users', function (Blueprint $table) {
-            $table->string('mobile')->after('name')->unique()->nullale();
-            $table->string('email')->after('username')->unique()->nullale();
+            $table->string('mobile')->after('name')->unique()->nullable();
+            $table->string('email')->after('username')->unique()->nullable();
         });
     }
 
