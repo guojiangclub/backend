@@ -20,7 +20,8 @@ use iBrand\Sms\Facade as Sms;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 
 class AuthAdminController extends AuthController
 {
@@ -98,18 +99,34 @@ class AuthAdminController extends AuthController
         }
 
         return response()->json([
-                'msg' => '管理员账号不存在或未绑定手机号码',
-                'status' => false,
-            ]);
+            'msg' => '管理员账号不存在或未绑定手机号码',
+            'status' => false,
+        ]);
     }
 
     public function getLogout(Request $request)
     {
+        if (config('ibrand.backend.scenario') == 'normal' || !config('ibrand.backend.scenario')) {
+            $this->guard()->logout();
+
+            $request->session()->invalidate();
+
+            return redirect(config('admin.route.prefix'));
+        }
+
         $this->guard()->logout();
+        Auth::guard('account')->logout();
 
-        $request->session()->invalidate();
+        $request->session()->flush();
 
-        return redirect(config('admin.route.prefix'));
+        $request->session()->regenerate();
+
+        Cookie::queue(Cookie::forget('ibrand_log_uuid'));
+        Cookie::queue(Cookie::forget('ibrand_log_sso_user'));
+        Cookie::queue(Cookie::forget('ibrand_log_application_name'));
+        Cookie::queue(Cookie::forget('ibrand_log_sso_user'));
+
+        return redirect('/account/login');
 
     }
 

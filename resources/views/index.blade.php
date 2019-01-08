@@ -69,7 +69,7 @@
 
 <div id="wrapper">
 
-    @if(config('admin.backend.scenario')=='normal' || !config('admin.backend.scenario'))
+    @if(config('ibrand.backend.scenario')=='normal' || !config('ibrand.backend.scenario'))
         @include('admin::partials.sidebar')
     @else
         @include('admin::partials.sidebar_saas')

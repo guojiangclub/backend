@@ -9,7 +9,8 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{env('APP_URL').'/account/index'}}">切换应用</a></li>
+                        <li><a href="{{env('APP_URL').'/account/index'}}">
+                                <i class="fa fa-film"></i>切换应用</a></li>
                         <li>
                             <a href="{{ url('admin/logout') }}"
                                onclick="event.preventDefault();
