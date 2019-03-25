@@ -3,9 +3,9 @@
 @section('content')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-12">
-            <h2 id="title_name" data-title="{{ $header or trans('admin.title') }}">
-                {{ $header or trans('admin.title') }}
-                <small>{{ $description or trans('admin.description') }}</small>
+            <h2 id="title_name" data-title="{{ $header  }}">
+                {{ $header  }}
+                <small>{{ $description }}</small>
             </h2>
             @if ($breadcrumb)
                 <ol class="breadcrumb" style="margin-right: 30px;">
