@@ -67,7 +67,7 @@
                         </div>
 
 
-                        @if(settings('admin_sms_login_status'))
+                        @if(config('ibrand.backend.sms_login'))
 
                         <div class="inptu-box code-box">
 
@@ -148,7 +148,7 @@
         window._token = "{{ csrf_token() }}";
         var postUrl = '{{env('APP_URL')}}/getMobile';
 
-        @if(settings('admin_sms_login_status'))
+        @if(config('ibrand.backend.sms_login'))
         $(document).ready(function () {
             // 发送验证码
             $('#send-verifi').on('click', function () {
