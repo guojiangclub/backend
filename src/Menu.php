@@ -39,7 +39,7 @@ class Menu
             return 0 == $value['parent_id'];
         });
 
-        $currentTopMenu = $this->currentTopMenu;
+        $currentTopMenu = $this->getCurrentTopMenu();
 
         $topMenus = $topMenus->map(function ($value, $key) use ($currentTopMenu) {
             if ($currentTopMenu['id'] == $value['id']) {
@@ -69,7 +69,9 @@ class Menu
 
     public function sideMenu()
     {
-        $topMenuId = $this->currentTopMenu['id'];
+        $currentTopMenu=$this->getCurrentTopMenu();
+
+        $topMenuId = $currentTopMenu['id'];
 
         return $this->dataMenu->subTree($this->allNodes, $topMenuId);
     }
