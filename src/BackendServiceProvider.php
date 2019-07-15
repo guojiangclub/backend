@@ -34,19 +34,19 @@ class BackendServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        app('view')->prependNamespace('admin', __DIR__ . '/../resources/views');
+        app('view')->prependNamespace('admin', __DIR__.'/../resources/views');
 
         // merge configs
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/backend.php', 'ibrand.backend'
+            __DIR__.'/../config/backend.php', 'ibrand.backend'
         );
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/backend.php' => config_path('ibrand/backend.php'),
+                __DIR__.'/../config/backend.php' => config_path('ibrand/backend.php'),
             ]);
 
-            $this->publishes([__DIR__ . '/../resources/assets' => public_path('vendor')]);
+            $this->publishes([__DIR__.'/../resources/assets' => public_path('vendor')]);
         }
 
         //merge filesystem
@@ -81,7 +81,7 @@ class BackendServiceProvider extends ServiceProvider
      */
     protected function registerMigrations()
     {
-        $this->loadMigrationsFrom(__DIR__ . '/../migrations');
+        return $this->loadMigrationsFrom(__DIR__.'/../migrations');
     }
 
     protected function mapWebRoutes()

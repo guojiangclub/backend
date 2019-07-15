@@ -30,9 +30,6 @@ return [
      */
     'title' => 'iBrand 管理后台',
 
-    /*
-     * Laravel-admin storage.
-     */
     'disks' => [
         'admin' => [
             'driver' => 'local',
@@ -42,12 +39,5 @@ return [
         ],
     ],
 
-    /*
-     * Use sms login backend.
-     */
-    'sms_login' => false,
-
-    'technical_support' => '上海艾游文化传播有限公司',
-
-    'copyright' =>'iBrand',
+    'scenario' => env('BACKEND_SCENARIO', 'normal')
 ];
