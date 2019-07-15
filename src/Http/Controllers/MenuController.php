@@ -108,7 +108,7 @@ class MenuController extends Controller
             $content->header(trans('admin.menu'));
             $content->description(trans('admin.edit'));
 
-            $content->row($this->form()->edit($id));
+            $content->row($this->form($id)->edit($id));
         });
     }
 
@@ -117,8 +117,59 @@ class MenuController extends Controller
      *
      * @return Form
      */
-    public function form()
+    public function form($id=null)
     {
+
+         if(!request()->isMethod('get') AND $id){
+
+            $role_menu_table=config('admin.database.role_menu_table');
+
+            $old_role_ids=DB::table($role_menu_table)->where('menu_id',$id)->pluck('role_id')->toArray();
+
+            $menuIds=$this->getMenuID($id);
+
+            try {
+
+                DB::beginTransaction();
+
+                if(count($old_role_ids)){
+
+                    foreach ($old_role_ids as $old_role_id){
+
+                        DB::table($role_menu_table)->where('role_id',$old_role_id)->whereIn('menu_id',$menuIds)->delete();
+                    }
+
+                }
+
+                foreach (request('roles') as $role){
+
+                    if(!empty($role) AND count($menuIds)){
+
+                        foreach ($menuIds as $menuId){
+
+                            $insert=[$role,$menuId];
+
+                            DB::insert('insert into '.$role_menu_table.' (role_id,menu_id) values (?, ? )',
+                                $insert);
+
+                        }
+
+                    }
+                }
+
+                DB::commit();
+
+
+            } catch (\Exception $exception) {
+
+                DB::rollBack();
+
+                throw  new \Exception($exception);
+
+            }
+
+        }
+
         return Menu::form(function (Form $form) {
             $form->display('id', 'ID');
 
@@ -142,4 +193,25 @@ class MenuController extends Controller
     {
         return 'For more icons please see <a href="http://fontawesome.io/icons/" target="_blank">http://fontawesome.io/icons/</a>';
     }
+
+
+   protected function getMenuID($menu_id)
+    {
+
+        $menuIds = [];
+
+        $ids = Menu::where('parent_id', $menu_id)->pluck('id');
+
+        if (count($ids)) {
+
+            foreach ($ids as $k => $id) {
+
+                $menuIds[$k] = Menu::where('parent_id', $id)->orWhere('id', $id)->pluck('id')->toArray();
+
+            }
+        }
+
+        return array_flatten($menuIds);
+    }
+
 }
