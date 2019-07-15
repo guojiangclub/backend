@@ -20,6 +20,7 @@ use Encore\Admin\Layout\Row;
 use Encore\Admin\Tree;
 use Encore\Admin\Widgets\Box;
 use Illuminate\Routing\Controller;
+use DB;
 
 class MenuController extends Controller
 {
