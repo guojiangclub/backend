@@ -93,10 +93,10 @@
         </div>
         <div class="footer">
             <div class="pull-right">
-                <strong>{{config('dmp.technical_support')}}</strong>.
+                <strong>{{config('ibrand.backend.technical_support')}}</strong>.
             </div>
             <div>
-                <strong>Copyright</strong> {{config('dmp.copyright')}}
+                <strong>Copyright</strong> {{config('ibrand.backend.copyright')}}
             </div>
         </div>
     </div>
