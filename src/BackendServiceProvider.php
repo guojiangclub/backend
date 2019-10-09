@@ -113,6 +113,8 @@ class BackendServiceProvider extends ServiceProvider
             $router->get('auth/setting', 'AuthAdminController@getSetting');
 
             $router->put('auth/setting', 'AuthAdminController@putSetting');
+
+            $router->get('/', 'HomeController@index');
         });
 
         Route::group(['namespace' => $this->namespace], function ($router) {

@@ -40,14 +40,14 @@
                         <div class="solution-cardlist swiper-wrapper">
                             <div class="col-sm-ss swiper-slide">
                                 <div class="solution-card">
-                                    <img src="http://dev.edu.com/vendor/img/1.png" width="100%">
+                                    <img src="{{admin_asset("vendor/img/1.png")}}" width="100%">
                                     <h3>为消费升级赋能<br>品牌新零售技术解决方案</h3>
                                     </span>
                                 </div>
                             </div>
                             <div class="col-sm-ss swiper-slide">
                                 <div class="solution-card">
-                                    <img src="http://dev.edu.com/vendor/img/2.png" width="100%">
+                                    <img src="{{admin_asset("vendor/img/2.png")}}" width="100%">
                                     <h3>提供漂亮的页面动态效果</h3>
 
                                 </div>
