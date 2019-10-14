@@ -1,22 +1,22 @@
 <div class="row" style="margin-top: 10px;">
 
-    <div class="col-md-9">
+    <div class="col-md-8 col-md-offset-2" >
         <a href="" target="_blank"><img src="{{admin_asset('vendor/img/banner1.png')}}" alt="" class="img-responsive"></a>
     </div>
-    <div class="col-md-3">
+    {{--<div class="col-md-3">
         <a href="" target="_blank"><img src="{{admin_asset('vendor/img/banner2.png')}}" alt="" class="img-responsive"></a>
-    </div>
+    </div>--}}
 </div>
 
 <div class="row" style="margin-top: 10px;">
-    <div class="col-md-12">
+    <div class="col-md-8 col-md-offset-2">
         <a href="" target="_blank"> <img src="{{admin_asset('vendor/img/svipbanner.jpg')}}" alt="" class="img-responsive"></a>
     </div>
 
 </div>
 
 <div class="row" style="margin-top: 10px;">
-    <div class="col-md-2">
+    <div class="col-md-2 col-md-offset-2">
         <div class="thumbnail">
             <img src="{{admin_asset('vendor/img/ec.qrcode.png')}}" alt="..." class="img-responsive">
             <div class="caption">
@@ -50,20 +50,20 @@
         <div class="thumbnail">
             <img src="{{admin_asset('vendor/img/box.qrcode.jpg')}}" alt="..." class="img-responsive">
             <div class="caption">
-                <h3 class="text-center">果酱盒子</h3>
+                <h3 class="text-center">果酱学院</h3>
                 {{--<p>...</p>--}}
                 {{--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>--}}
             </div>
         </div>
     </div>
-    <div class="col-md-2">
+    {{--<div class="col-md-1">
         <div class="thumbnail">
             <img src="{{admin_asset('vendor/img/album.qrcode.jpg')}}" alt="..." class="img-responsive">
             <div class="caption">
                 <h3 class="text-center">果酱相册</h3>
-                {{--<p>...</p>--}}
-                {{--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>--}}
+                --}}{{--<p>...</p>--}}{{--
+                --}}{{--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>--}}{{--
             </div>
         </div>
-    </div>
+    </div>--}}
 </div>

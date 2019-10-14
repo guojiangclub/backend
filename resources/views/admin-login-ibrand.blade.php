@@ -70,7 +70,7 @@
 
                 <div class="login-box">
                     <div class="logo">
-                        <img src="{{ admin_asset("/vendor/img/logo.png") }}" alt="">
+                        <img src="{{ admin_asset("/vendor/img/logo.jpg") }}" alt="">
                     </div>
                     <div class="inptu-box">
 

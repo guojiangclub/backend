@@ -121,12 +121,13 @@ a:hover {
 }
 .logo {
     margin-bottom: 40px;
+    text-align: center;
 }
 .login-form .login-box {
     padding: 33px 25px;
 }
 .login-form .login-box .logo img{
-    width: 100%;
+    width: 50%;
 }
 
 .login-form .login-box .inptu-box {
@@ -146,6 +147,7 @@ a:hover {
 .code-box {
     display: flex;
     align-content: center;
+    margin-bottom: 20px;
 }
 .login-form .login-box .code-box input {
     margin-bottom: 0;
@@ -154,7 +156,7 @@ a:hover {
 .login-form .login-box .code-box .code {
     cursor: pointer;
     flex: 1;
-    background: #2BC0BE;
+    background: #EF462A;
     color: #ffffff;
     font-size: 12px;
     text-align: center;
@@ -164,7 +166,7 @@ a:hover {
 }
 .login {
     cursor: pointer;
-    background: #2BC0BE;
+    background: #EF462A;
     color: #ffffff;
     text-align: center;
     line-height: 40px;
@@ -244,7 +246,7 @@ body{background-color: #2BC0BE}
 
 .login-right{width: 50%; display: flex;
     height: 100%;
-    background: #2BC0BE;
+    background: #F05D39;
     align-items: center; /* 垂直居中 */
     justify-content: center; /* 水平居中 */
 }
