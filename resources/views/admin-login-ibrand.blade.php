@@ -40,18 +40,18 @@
                         <div class="solution-cardlist swiper-wrapper">
                             <div class="col-sm-ss swiper-slide">
                                 <div class="solution-card">
-                                    <img src="{{admin_asset("vendor/img/1.png")}}" width="100%">
-                                    <h3>为消费升级赋能<br>品牌新零售技术解决方案</h3>
-                                    </span>
+                                    <a href="https://guojiang.club/svip" target="_blank">
+                                        <img src="https://iyoyo.oss-cn-hangzhou.aliyuncs.com/guojiangclub/backendbanner.png" width="100%">
+                                        <h3>果酱社区 SVIP <br>100位种子用户招募中</h3>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="col-sm-ss swiper-slide">
+                            {{--<div class="col-sm-ss swiper-slide">
                                 <div class="solution-card">
                                     <img src="{{admin_asset("vendor/img/2.png")}}" width="100%">
                                     <h3>提供漂亮的页面动态效果</h3>
-
                                 </div>
-                            </div>
+                            </div>--}}
 
                         </div>
                         <div class="swiper-pagination solution-pagination"></div>
@@ -261,7 +261,7 @@
             spaceBetween: 0,
             slidesPerGroup: 1,
             loop: true,
-            autoplay: true,
+            autoplay: false,
 
             //分页索引
             pagination: {
