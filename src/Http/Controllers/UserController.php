@@ -133,8 +133,8 @@ class UserController extends Controller
             $form->multipleSelect('permissions', trans('admin.permissions'))->options(Permission::all()->pluck('name', 'id'));
 
 
-            $form->checkbox('notifications.wx_type', '微信模板消息通知')
-                ->options(['wx_orders' => '新订单通知', 'wx_refund' => '新售后通知'])->default($Notifications);
+            $form->checkbox('notifications.wx_type', '')
+                ->options(['wx_orders' => '', 'wx_refund' => ''])->default($Notifications);
 
 
             $form->display('created_at', trans('admin.created_at'));
