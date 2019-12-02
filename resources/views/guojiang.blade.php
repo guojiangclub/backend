@@ -10,7 +10,8 @@
 
 <div class="row" style="margin-top: 10px;">
     <div class="col-md-8 col-md-offset-2">
-        <a href="https://guojiang.club/svip" target="_blank"> <img src="{{admin_asset('vendor/img/svipbanner.jpg')}}" alt="" class="img-responsive"></a>
+        <a href="https://guojiang.club/svip" target="_blank"> <img src="https://cdn.guojiang.club/guojiangclub/svipbanner_20191202144928.jpg"
+                                                                   alt="" class="img-responsive"></a>
     </div>
 </div>
 
