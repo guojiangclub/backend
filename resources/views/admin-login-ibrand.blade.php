@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="info">
-                    技术支持：上海氪来科技有限公司
+                    技术支持：成都赞国文化传播有限公司
                 </div>
             </div>
 
@@ -51,7 +51,7 @@
 
                     <div class="login-box">
                         <div class="logo">
-                            <img src="{{ admin_asset("/vendor/img/logo.png") }}" alt="">
+                            <img src="{{ admin_asset("/vendor/img/changdou.png") }}" alt="">
                         </div>
                         <div class="inptu-box">
 
