@@ -32,7 +32,7 @@ class AuthAdminController extends AuthController
 	    }
 
 	    $time = time();
-	    $salt = 'changdou-admin-login';
+	    $salt = 'changdou-admin-login-sing';
 	    $sign = md5(http_build_query(['key' => config('ibrand.app.sign_key'), 'salt' => $salt, 'time' => $time]));
 
 	    return view('admin::admin-login-ibrand', compact('time', 'salt', 'sign'));
