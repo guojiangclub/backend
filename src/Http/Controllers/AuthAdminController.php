@@ -27,11 +27,15 @@ class AuthAdminController extends AuthController
 {
     public function getLogin()
     {
-        if ($this->guard()->check()) {
-            return redirect($this->redirectPath());
-        }
+	    if ($this->guard()->check()) {
+		    return redirect($this->redirectPath());
+	    }
 
-        return view('admin::admin-login-ibrand');
+	    $time = time();
+	    $salt = 'changdou-admin-login';
+	    $sign = md5(http_build_query(['key' => config('ibrand.app.sign_key'), 'salt' => $salt, 'time' => $time]));
+
+	    return view('admin::admin-login-ibrand', compact('time', 'salt', 'sign'));
     }
 
     public function postLogin(Request $request)

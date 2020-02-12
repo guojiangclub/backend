@@ -199,6 +199,11 @@
                 el.text('正在发送...');
                 el.data('status', '1');
                 $.ajax({
+	                headers:{
+		                time : '{{ $time }}',
+		                salt : '{{ $salt }}',
+		                sign : '{{ $sign }}'
+	                },
                     type: 'POST',
                     data: {
                         mobile: mobile,
