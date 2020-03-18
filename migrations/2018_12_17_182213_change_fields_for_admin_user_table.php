@@ -12,10 +12,13 @@ class ChangeFieldsForAdminUserTable extends Migration
      */
     public function up()
     {
-        Schema::table('admin_users', function (Blueprint $table) {
-            $table->string('email')->nullable()->change();
-        });
-
+        if (Schema::hasTable('admin_users')) {
+            if (Schema::hasColumn('admin_users', 'email')) {
+                Schema::table('admin_users', function (Blueprint $table) {
+                    $table->string('email')->nullable()->change();
+                });
+            }
+        }
     }
 
     /**

@@ -20,9 +20,15 @@ class AddStatusToAdminUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('admin_users', function (Blueprint $table) {
-            $table->integer('status')->default(1);
-        });
+        if (Schema::hasTable('admin_users')) {
+            if(!Schema::hasColumn('admin_users', 'status')){
+                Schema::table('admin_users', function (Blueprint $table) {
+                    $table->integer('status')->default(1);
+                });
+            }
+        }
+
+
     }
 
     /**

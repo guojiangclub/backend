@@ -20,9 +20,11 @@ class AddBlankToAdminMenuTable extends Migration
      */
     public function up()
     {
-        Schema::table('admin_menu', function (Blueprint $table) {
-            $table->integer('blank')->after('icon')->default(0);
-        });
+        if (Schema::hasTable('admin_menu') && !Schema::hasColumn('admin_menu', 'blank')) {
+            Schema::table('admin_menu', function (Blueprint $table) {
+                $table->integer('blank')->after('icon')->default(0);
+            });
+        }
     }
 
     /**
