@@ -20,7 +20,7 @@ class AddStatusToAdminUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('admin_users', function (Blueprint $table) {
+        Schema::table(config('admin.database.users_table'), function (Blueprint $table) {
             $table->integer('status')->default(1);
         });
     }
@@ -30,7 +30,7 @@ class AddStatusToAdminUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('admin_users', function (Blueprint $table) {
+        Schema::table(config('admin.database.users_table'), function (Blueprint $table) {
             $table->dropColumn('status');
         });
     }

@@ -20,7 +20,7 @@ class AddBlankToAdminMenuTable extends Migration
      */
     public function up()
     {
-        Schema::table('admin_menu', function (Blueprint $table) {
+        Schema::table(config('admin.database.menu_table'), function (Blueprint $table) {
             $table->integer('blank')->after('icon')->default(0);
         });
     }
@@ -30,7 +30,7 @@ class AddBlankToAdminMenuTable extends Migration
      */
     public function down()
     {
-        Schema::table('admin_menu', function (Blueprint $table) {
+        Schema::table(config('admin.database.menu_table'), function (Blueprint $table) {
             $table->dropColumn('blank');
         });
     }
