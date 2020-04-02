@@ -20,7 +20,7 @@ class AddMobileToAdminUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('admin_users', function (Blueprint $table) {
+        Schema::table(config('admin.database.users_table'), function (Blueprint $table) {
             $table->string('mobile')->after('name')->unique()->nullable();
             $table->string('email')->after('username')->unique()->nullable();
         });
@@ -31,7 +31,7 @@ class AddMobileToAdminUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('admin_users', function (Blueprint $table) {
+        Schema::table(config('admin.database.users_table'), function (Blueprint $table) {
             $table->dropColumn('mobile');
             $table->dropColumn('email');
         });
