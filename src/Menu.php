@@ -23,8 +23,8 @@ class Menu
     public function __construct(DataMenu $menu)
     {
         $this->dataMenu = $menu;
-        $this->allNodes = $this->dataMenu->allNodes();
-        $this->collectNodes = collect($this->allNodes);
+        //$this->allNodes = $this->dataMenu->allNodes();
+        //$this->collectNodes = collect($this->allNodes);
         $this->currentTopMenu = $this->getCurrentTopMenu();
     }
 
@@ -35,7 +35,7 @@ class Menu
      */
     public function topMenu()
     {
-        $topMenus = $this->collectNodes->filter(function ($value, $key) {
+        $topMenus = $this->getCollectAllNodes()->filter(function ($value, $key) {
             return 0 == $value['parent_id'];
         });
 
@@ -60,7 +60,7 @@ class Menu
             return $currentNode;
         }
 
-        $currentNode = $this->collectNodes->filter(function ($value, $key) use ($currentNode) {
+        $currentNode = $this->getCollectAllNodes()->filter(function ($value, $key) use ($currentNode) {
             return $value['id'] == $currentNode['parent_id'];
         })->first();
 
@@ -73,7 +73,7 @@ class Menu
 
         $topMenuId = $currentTopMenu['id'];
 
-        return $this->dataMenu->subTree($this->allNodes, $topMenuId);
+        return $this->dataMenu->subTree($this->dataMenu->allNodes(), $topMenuId);
     }
 
     /**
@@ -85,7 +85,7 @@ class Menu
 
         $currentMenuUri = str_replace($prefix, '', request()->path());
 
-        $currentMenu = $this->collectNodes->filter(function ($value, $key) use ($currentMenuUri) {
+        $currentMenu = $this->getCollectAllNodes()->filter(function ($value, $key) use ($currentMenuUri) {
             return $value['uri'] == trim($currentMenuUri, '/');
         })->first();
 
@@ -107,7 +107,7 @@ class Menu
      */
     protected function getCurrentTopMenuByUri($currentMenuUri)
     {
-        $topMenus = $this->collectNodes->filter(function ($value, $key) {
+        $topMenus = $this->getCollectAllNodes()->filter(function ($value, $key) {
             return 0 == $value['parent_id'];
         });
         $topMenus->each(function ($item, $key) use ($currentMenuUri, &$currentTopMenu) {
@@ -119,5 +119,10 @@ class Menu
         });
 
         return $currentTopMenu;
+    }
+
+    protected function getCollectAllNodes(){
+
+        return collect($this->dataMenu->allNodes());
     }
 }
