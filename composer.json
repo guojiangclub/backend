@@ -19,7 +19,7 @@
 	"require": {
 		"php": ">=7.0.0",
 		"encore/laravel-admin": "~1.6",
-		"laravel-admin-ext/helpers": "~2.0",
+		"laravel-admin-ext/helpers": "~1.0",
 		"laravel-admin-ext/scheduling": "~1.0",
 		"laravel-admin-ext/log-viewer": "~1.0",
 		"laravel-admin-ext/redis-manager": "~1.0",
