@@ -30,8 +30,8 @@
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~8.0",
-		"orchestra/testbench": "~3.7",
-		"orchestra/database": "~3.7"
+		"orchestra/testbench": "~3.9",
+		"orchestra/database": "~3.9"
 	},
 	"autoload": {
 		"psr-4": {
