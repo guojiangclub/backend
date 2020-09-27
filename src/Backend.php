@@ -14,7 +14,6 @@ namespace iBrand\Backend;
 use Encore\Admin\Admin;
 use Encore\Admin\Form;
 
-
 class Backend extends Admin
 {
     /**
@@ -22,7 +21,7 @@ class Backend extends Admin
      */
     public static $jsFiles = [];
 
-    public static function js($js = null)
+    public static function js($js = null, $minify = true)
     {
         if (!is_null($js)) {
             self::$jsFiles = array_merge(self::$jsFiles, (array) $js);
