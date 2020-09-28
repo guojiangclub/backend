@@ -75,25 +75,29 @@ class MenuController extends Controller
      */
     protected function treeView()
     {
-        return Menu::tree(function (Tree $tree) {
-            $tree->disableCreate();
+        $menuModel = config('admin.database.menu_model');
 
-            $tree->branch(function ($branch) {
-                $payload = "<i class='fa {$branch['icon']}'></i>&nbsp;<strong>{$branch['title']}</strong>";
+        $tree = new Tree(new $menuModel());
 
-                if (!isset($branch['children'])) {
-                    if (url()->isValidUrl($branch['uri'])) {
-                        $uri = $branch['uri'];
-                    } else {
-                        $uri = admin_base_path($branch['uri']);
-                    }
+        $tree->disableCreate();
 
-                    $payload .= "&nbsp;&nbsp;&nbsp;<a href=\"$uri\" class=\"dd-nodrag\">$uri</a>";
+        $tree->branch(function ($branch) {
+            $payload = "<i class='fa {$branch['icon']}'></i>&nbsp;<strong>{$branch['title']}</strong>";
+
+            if (!isset($branch['children'])) {
+                if (url()->isValidUrl($branch['uri'])) {
+                    $uri = $branch['uri'];
+                } else {
+                    $uri = admin_url($branch['uri']);
                 }
 
-                return $payload;
-            });
+                $payload .= "&nbsp;&nbsp;&nbsp;<a href=\"$uri\" class=\"dd-nodrag\">$uri</a>";
+            }
+
+            return $payload;
         });
+
+        return $tree;
     }
 
     /**
