@@ -18,20 +18,19 @@
 	],
 	"require": {
 		"php": ">=7.0.0",
-		"encore/laravel-admin": "^1.8",
-		"laravel-admin-ext/helpers": "~1.0",
-		"laravel-admin-ext/scheduling": "~1.0",
-		"laravel-admin-ext/log-viewer": "~1.0",
-		"laravel-admin-ext/redis-manager": "~1.0",
-		"laravel-admin-ext/backup": "~1.0",
+		"encore/laravel-admin": "1.5.19",
+		"laravel-admin-ext/helpers": "1.0.2",
+		"laravel-admin-ext/scheduling": "1.0.1",
+		"laravel-admin-ext/log-viewer": "1.0.2",
+		"laravel-admin-ext/redis-manager": "1.0.1",
+		"laravel-admin-ext/backup": "1.0.2",
 		"ibrand/laravel-sms": "~1.0",
 		"ibrand/setting": "~1.0",
-		"maatwebsite/excel": "^3.1"
+		"maatwebsite/excel": "~2.1.23"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "~8.0",
-		"orchestra/testbench": "~4.0",
-		"orchestra/database": "~4"
+		"phpunit/phpunit": "~6.0",
+		"orchestra/testbench": "~3.5"
 	},
 	"autoload": {
 		"psr-4": {

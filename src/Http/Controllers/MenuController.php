@@ -75,29 +75,25 @@ class MenuController extends Controller
      */
     protected function treeView()
     {
-        $menuModel = config('admin.database.menu_model');
+        return Menu::tree(function (Tree $tree) {
+            $tree->disableCreate();
 
-        $tree = new Tree(new $menuModel());
+            $tree->branch(function ($branch) {
+                $payload = "<i class='fa {$branch['icon']}'></i>&nbsp;<strong>{$branch['title']}</strong>";
 
-        $tree->disableCreate();
+                if (!isset($branch['children'])) {
+                    if (url()->isValidUrl($branch['uri'])) {
+                        $uri = $branch['uri'];
+                    } else {
+                        $uri = admin_base_path($branch['uri']);
+                    }
 
-        $tree->branch(function ($branch) {
-            $payload = "<i class='fa {$branch['icon']}'></i>&nbsp;<strong>{$branch['title']}</strong>";
-
-            if (!isset($branch['children'])) {
-                if (url()->isValidUrl($branch['uri'])) {
-                    $uri = $branch['uri'];
-                } else {
-                    $uri = admin_url($branch['uri']);
+                    $payload .= "&nbsp;&nbsp;&nbsp;<a href=\"$uri\" class=\"dd-nodrag\">$uri</a>";
                 }
 
-                $payload .= "&nbsp;&nbsp;&nbsp;<a href=\"$uri\" class=\"dd-nodrag\">$uri</a>";
-            }
-
-            return $payload;
+                return $payload;
+            });
         });
-
-        return $tree;
     }
 
     /**
@@ -125,7 +121,7 @@ class MenuController extends Controller
     public function form($id=null)
     {
 
-         if(!request()->isMethod('get') AND $id){
+        if(!request()->isMethod('get') AND $id){
 
             $role_menu_table=config('admin.database.role_menu_table');
 
@@ -200,7 +196,7 @@ class MenuController extends Controller
     }
 
 
-   protected function getMenuID($menu_id)
+    protected function getMenuID($menu_id)
     {
 
         $menuIds = [];

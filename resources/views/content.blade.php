@@ -13,8 +13,8 @@
                     @foreach($breadcrumb as $item)
                         @if($loop->last)
                             <li class="active"
-                                    @if (array_has($item, 'left-menu-active'))
-                                        id="left-menu-active" data-left-menu-active="{{$item['left-menu-active']}}"
+                                @if (array_has($item, 'left-menu-active'))
+                                id="left-menu-active" data-left-menu-active="{{$item['left-menu-active']}}"
                                     @endif>
                                 @if (array_has($item, 'icon'))
                                     <i class="fa fa-{{ $item['icon'] }}"></i>
@@ -25,11 +25,11 @@
                             <li>
                                 <a
 
-                                    @if (array_has($item, 'no-pjax'))
-                                       no-pjax
-                                    @endif
+                                        @if (array_has($item, 'no-pjax'))
+                                        no-pjax
+                                        @endif
 
-                                    href="{{ admin_url(array_get($item, 'url')) }}">
+                                        href="{{ admin_url(array_get($item, 'url')) }}">
 
                                     @if (array_has($item, 'icon'))
                                         <i class="fa fa-{{ $item['icon'] }}"></i>
@@ -85,11 +85,7 @@
         @include('admin::partials.exception')
         @include('admin::partials.toastr')
 
-        @if($_view_)
-            @include($_view_['view'], $_view_['data'])
-        @else
-            {!! $_content_ !!}
-        @endif
+        {!! $content !!}
 
     </section>
 @endsection
