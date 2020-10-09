@@ -21,7 +21,6 @@ use Illuminate\Routing\Controller;
 use iBrand\Backend\Models\Admin as Administrator;
 use iBrand\Backend\Models\AdminNotifications;
 
-
 class UserController extends Controller
 {
     use ModelForm;
@@ -78,7 +77,7 @@ class UserController extends Controller
      */
     protected function grid()
     {
-        return Administrator::grid(function (Grid $grid) {
+        return Admin::grid(Administrator::class, function (Grid $grid) {
             $grid->id('ID')->sortable();
             $grid->username(trans('admin.username'));
             $grid->name(trans('admin.name'));
@@ -110,7 +109,7 @@ class UserController extends Controller
 
         $Notifications = AdminNotifications::where('admin_id', $id)->pluck('type')->toArray();
 
-        return Administrator::form(function (Form $form) use ($Notifications) {
+        return Admin::form(Administrator::class, function (Form $form) use ($Notifications) {
 
             $form->display('id', 'ID');
 
@@ -132,23 +131,18 @@ class UserController extends Controller
             $form->multipleSelect('roles', trans('admin.roles'))->options(Role::all()->pluck('name', 'id'));
             $form->multipleSelect('permissions', trans('admin.permissions'))->options(Permission::all()->pluck('name', 'id'));
 
-
             $form->checkbox('notifications.wx_type', '')
                 ->options(['wx_orders' => '', 'wx_refund' => ''])->default($Notifications);
 
-
             $form->display('created_at', trans('admin.created_at'));
             $form->display('updated_at', trans('admin.updated_at'));
-
 
             $form->saving(function (Form $form) {
 
                 if ($form->password && $form->model()->password != $form->password) {
                     $form->password = bcrypt($form->password);
                 }
-
             });
-
 
             $form->saved(function (Form $form) {
 
@@ -158,13 +152,13 @@ class UserController extends Controller
 
                 if (count($type) > 0) {
                     foreach ($type as $item) {
-                        if (!$item) continue;
+                        if (!$item) {
+                            continue;
+                        }
                         AdminNotifications::create(['type' => $item, 'admin_id' => $form->model()->id]);
                     }
                 }
             });
-
-
         });
     }
 }
