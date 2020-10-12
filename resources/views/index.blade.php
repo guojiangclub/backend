@@ -22,7 +22,7 @@
 
     <!-- REQUIRED JS SCRIPTS -->
     <script src="{{ admin_asset ("/vendor/laravel-admin/AdminLTE/plugins/jQuery/jQuery-2.1.4.min.js") }}"></script>
-
+    <script src="{{ admin_asset ("/vendor/libs/jquery.form.min.js") }}"></script>
     {!! \iBrand\Backend\Backend::js() !!}
 
     <!--[if lt IE 9]>
@@ -89,7 +89,6 @@
 
 {!! Admin::js() !!}
 <!-- REQUIRED JS SCRIPTS BY iBrand-->
-<script src="{{ admin_asset ("/vendor/libs/jquery.form.min.js") }}"></script>
 <script src="{{ admin_asset ("/vendor/libs/webuploader-0.1.5/webuploader.js") }}"></script>
 <script src="{{ admin_asset("/vendor/inspinia/js/plugins/metisMenu/jquery.metisMenu.js") }}"></script>
 <script src="{{ admin_asset("/vendor/inspinia/js/inspinia.js") }}"></script>
