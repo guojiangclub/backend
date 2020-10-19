@@ -87,7 +87,36 @@
 	LA.token = "{{ csrf_token() }}";
 </script>
 
-{!! Admin::js() !!}
+<!-- REQUIRED JS SCRIPTS BY laravel-admin -->
+<script src="{{ admin_asset ("/vendor/laravel-admin/AdminLTE/bootstrap/js/bootstrap.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/AdminLTE/dist/js/app.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/jquery-pjax/jquery.pjax.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/nprogress/nprogress.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/nestable/jquery.nestable.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/toastr/build/toastr.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/bootstrap3-editable/js/bootstrap-editable.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/sweetalert2/dist/sweetalert2.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/libs/laravel-admin.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/AdminLTE/plugins/iCheck/icheck.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/AdminLTE/plugins/colorpicker/bootstrap-colorpicker.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/AdminLTE/plugins/input-mask/jquery.inputmask.bundle.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/moment/min/moment-with-locales.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js") }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/shortcut-buttons-flatpickr@0.1.0/dist/shortcut-buttons-flatpickr.min.js"></script>
+<script src="https://npmcdn.com/flatpickr@4.6.6/dist/l10n/zh.js"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/bootstrap-fileinput/js/fileinput.min.js?v=4.5.2") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/AdminLTE/plugins/select2/select2.full.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/number-input/bootstrap-number-input.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/AdminLTE/plugins/ionslider/ion.rangeSlider.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/bootstrap-switch/dist/js/bootstrap-switch.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/fontawesome-iconpicker/dist/js/fontawesome-iconpicker.min.js") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/bootstrap-fileinput/js/plugins/sortable.min.js?v=4.5.2") }}"></script>
+<script src="{{ admin_asset ("/vendor/laravel-admin/bootstrap-duallistbox/dist/jquery.bootstrap-duallistbox.min.js") }}"></script>
+
+
 <!-- REQUIRED JS SCRIPTS BY iBrand-->
 <script src="{{ admin_asset ("/vendor/libs/webuploader-0.1.5/webuploader.js") }}"></script>
 <script src="{{ admin_asset("/vendor/inspinia/js/plugins/metisMenu/jquery.metisMenu.js") }}"></script>
