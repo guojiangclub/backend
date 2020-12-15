@@ -51,7 +51,7 @@
 
                     <div class="login-box">
                         <div class="logo">
-                            <img src="{{ admin_asset("/vendor/img/changdou.png") }}" alt="">
+                            <img src="{{ env('DEFAULT_BACKEND_LOGO', 'https://image-cdn.changdou.top/changdou.png') }}" alt="">
                         </div>
                         <div class="inptu-box">
 
