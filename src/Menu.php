@@ -118,6 +118,10 @@ class Menu
             }
         });
 
+        if (is_null($currentTopMenu) && 'auth' == array_first(explode('/', trim($currentMenuUri, '/')))) {
+            $currentTopMenu = DataMenu::where('title', '系统管理')->where('parent_id', 0)->first();
+        }
+
         return $currentTopMenu;
     }
 }
